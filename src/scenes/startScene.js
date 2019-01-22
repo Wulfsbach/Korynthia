@@ -69,7 +69,7 @@ this.anims.create({
 
 var backF1= this.add.image(600,400,'forest1');
 var backf3= this.add.image(600,400,'forest3');
-var orb1= this.add.sprite(-100,-100, 'orb1').play('shine')
+var orbCrash= this.add.sprite(100,0, 'orbCrash').play('shine');
 
 var backf4=this.add.image(600,400,'forest4');
 var backf2= this.add.image(600,400,'forest2');
@@ -123,13 +123,18 @@ titleMusic.play();
 
 // this.add.sprite(600,400, 'orb1').play('shine')
 
-var title = this.add.image(600,100,'title')
+var title = this.add.image(600,100,'title');
+
+
 var tween = this.tweens.add({
-    targets:orb1,
+    targets:orbCrash,
     props:{
-        x={value:'+=800', ease:'Power1'},
-        y={value:'+=800', ease:'Power1'}
-    }
+        x: {value:'+=900', ease: 'Power4'},
+        y: {value:'+=900',ease: 'Power1'}
+        // y:{ value: function(){return marker.y;}, ease:'Power3'}
+
+    },
+    duration:6000,
 });
 
 
