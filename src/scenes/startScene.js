@@ -17,6 +17,7 @@ this.load.image('forest3','assets/Images/Background/title/forest3.png');
 this.load.image('forest4','assets/Images/Background/title/forest4.png');
 this.load.audio('treeoflife','assets/Sound/Music/treeoflife.wav');
 this.load.audio('OrbWhoosh','assets/Sound/FX/OrbWhoosh.wav');
+this.load.audio('OrbBoom','assets/Sound/FX/OrbBoom.wav');
 this.load.image('title', 'assets/Images/KorTitle.png');
 this.load.image('orb1','assets/Images/SpriteSheets/OrbLoop/orb1.png');
 this.load.image('orb2','assets/Images/SpriteSheets/OrbLoop/orb2.png');
@@ -96,8 +97,8 @@ var titleConfig= {
     delay:0
 }
 var titleMusic =this.sound.add('treeoflife',titleConfig);
-
 var OrbFX= this.sound.add('OrbWhoosh');
+var Boom= this.sound.add('OrbBoom');
 
 titleMusic.play();
 
@@ -134,18 +135,27 @@ var title = this.add.image(600,100,'title');
 var tween = this.tweens.add({
     targets:orbCrash,
     props:{
-        x: {value:'+=1000', ease: 'Power4'},
-        y: {value:'+=900',ease: 'Power1'}
+        x: {value:'+=1200', ease: 'Power0'},
+        y: {value:'+=900',ease: 'Power0'}
         // y:{ value: function(){return marker.y;}, ease:'Power3'}
 
     },
     duration:6000,
+    
+    
+    
 });
 
 
  
+     if (orbCrash.x = 1200 ) {
+         
+         orbBoom.play();
+     }else if( orbCrash.x < 1200){
+OrbFX.play();
+     }
+ }
 
 
 }
 
-}
