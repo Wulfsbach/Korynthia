@@ -148,14 +148,11 @@ var tween = this.tweens.add({
 
 
  
-     if (orbCrash.x = 1200 ) {
-         
-         orbBoom.play();
-     }else if( orbCrash.x < 1200){
-OrbFX.play();
-     }
+     
  }
 
 
 }
+
+
 
