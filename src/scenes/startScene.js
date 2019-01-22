@@ -16,6 +16,7 @@ this.load.image('forest2', 'assets/Images/Background/title/forest2.png');
 this.load.image('forest3','assets/Images/Background/title/forest3.png');
 this.load.image('forest4','assets/Images/Background/title/forest4.png');
 this.load.audio('treeoflife','assets/Sound/Music/treeoflife.wav');
+this.load.audio('OrbWhoosh','assets/Sound/FX/OrbWhoosh.wav');
 this.load.image('title', 'assets/Images/KorTitle.png');
 this.load.image('orb1','assets/Images/SpriteSheets/OrbLoop/orb1.png');
 this.load.image('orb2','assets/Images/SpriteSheets/OrbLoop/orb2.png');
@@ -83,6 +84,8 @@ backf3.displayHeight=800;
 backf3.displayWidth=1200;
 backf4.displayHeight=800;
 backf4.displayWidth=1200;
+orbCrash.displayHeight= 150;
+orbCrash.displayWidth= 150;
 
 
 var titleConfig= {
@@ -93,6 +96,8 @@ var titleConfig= {
     delay:0
 }
 var titleMusic =this.sound.add('treeoflife',titleConfig);
+
+var OrbFX= this.sound.add('OrbWhoosh');
 
 titleMusic.play();
 
@@ -129,7 +134,7 @@ var title = this.add.image(600,100,'title');
 var tween = this.tweens.add({
     targets:orbCrash,
     props:{
-        x: {value:'+=900', ease: 'Power4'},
+        x: {value:'+=1000', ease: 'Power4'},
         y: {value:'+=900',ease: 'Power1'}
         // y:{ value: function(){return marker.y;}, ease:'Power3'}
 
@@ -137,6 +142,8 @@ var tween = this.tweens.add({
     duration:6000,
 });
 
+
+ 
 
 
 }
