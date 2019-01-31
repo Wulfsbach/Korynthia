@@ -142,10 +142,11 @@ this.anims.create({
 var backF1= this.add.image(600,400,'forest1');
 var backf3= this.add.image(600,400,'forest3');
 var orbCrash= this.add.sprite(100,0, 'orbCrash').play('shine');
-
 var backf4=this.add.image(600,400,'forest4');
 var backf2= this.add.image(600,400,'forest2');
 
+//Need to figure out order of the images. Add the proper new images and pair them with their cooresponding animations. Goal is to add a white page and use a tween, or possible an animation fucntion to create a white flash//
+//This will allow me to further add fire and the burning animation as the aftermath of the crash for the title screen.//
 
 backF1.displayWidth = 1200;
 backF1.displayHeight= 800;
@@ -158,7 +159,10 @@ backf4.displayWidth=1200;
 orbCrash.displayHeight= 150;
 orbCrash.displayWidth= 150;
 
+//Need to add buttons and functionality around here so that the game can progress to the next screen//
 
+//Next Scene will be a character class/ creator of sorts which will be stored in either an SQL or Non-SQL database however I haven't decided yet//
+//Title animation needs to be added as well, will consider adding an options menu to control volume and perhaps font size? Although I am not entirely sure of it yet//
 var titleConfig= {
     mute:false,
     volume:0.2,
