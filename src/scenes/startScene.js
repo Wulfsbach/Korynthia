@@ -95,7 +95,7 @@ this.anims.create({
     repeat:-1
 });
 
-this.anime.create({
+this.anims.create({
     key:'exploding',
     frames:[
         {key: 'Explosion1'},
@@ -119,6 +119,24 @@ this.anime.create({
     repeat:-1
     
 });
+
+this.anims.create({
+    key:'burning',
+    frames:[
+        {key: 'Fire5-1'},
+        {key: 'Fire5-2'},
+        {key: 'Fire5-3'},
+        {key: 'Fire5-4'},
+        {key: 'Fire5-5'},
+        {key: 'Fire5-6'},
+        {key: 'Fire5-7'},
+        {key: 'Fire5-8'},
+        {key: 'Fire5-9'},
+        {key: 'Fire5-10'}
+    ],
+    frameRate:8,
+    repeat:1
+})
 
 
 var backF1= this.add.image(600,400,'forest1');
@@ -194,7 +212,7 @@ var tween = this.tweens.add({
     },
     duration:4000,
     onStart: function() {OrbFX.play()},
-    onComplete: function() {Boom.play(),}
+    onComplete: function() {Boom.play()}
     
     
     
