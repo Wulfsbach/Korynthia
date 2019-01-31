@@ -136,20 +136,24 @@ var tween = this.tweens.add({
     targets:orbCrash,
     props:{
         x: {value:'+=1200', ease: 'Power0'},
-        y: {value:'+=900',ease: 'Power0'}
+        y: {value:'+=900',ease: 'Power0'},
         // y:{ value: function(){return marker.y;}, ease:'Power3'}
-
+     
     },
-    duration:6000,
+    duration:4000,
+    onStart: function() {OrbFX.play()},
+    onComplete: function() {Boom.play()}
     
     
     
 });
 
 
- 
      
  }
+
+
+
 
 
 }
