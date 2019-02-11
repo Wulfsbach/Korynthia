@@ -19,6 +19,10 @@ this.load.audio('treeoflife','assets/Sound/Music/treeoflife.wav');
 this.load.audio('OrbWhoosh','assets/Sound/FX/OrbWhoosh.wav');
 this.load.audio('OrbBoom','assets/Sound/FX/OrbBoom.wav');
 this.load.image('title', 'assets/Images/KorTitle.png');
+this.load.image('newgame', 'assets/Images/New-Game.png');
+this.load.image('continue','assets/Images/Continue.png');
+this.load.image('options','assets/Images/Options.png');
+this.load.image('credits','assets/Images/Credits.png');
 this.load.audio('burning', 'assets/Sound/FX/Burning.wav');
 this.load.image('orb1','assets/Images/SpriteSheets/OrbLoop/orb1.png');
 this.load.image('orb2','assets/Images/SpriteSheets/OrbLoop/orb2.png');
@@ -116,7 +120,8 @@ this.anims.create({
         {key: 'Explosion16'},
     ],
     frameRate:5,
-    repeat:-1
+    repeat:-1,
+
     
 });
 
@@ -135,7 +140,8 @@ this.anims.create({
         {key: 'Fire5-10'}
     ],
     frameRate:8,
-    repeat:1
+    repeat:1,
+    
 })
 
 
@@ -145,9 +151,12 @@ var orbCrash= this.add.sprite(100,0, 'orbCrash').play('shine');
 var backf4=this.add.image(600,400,'forest4');
 var backf2= this.add.image(600,400,'forest2');
 
+
 //Need to figure out order of the images. Add the proper new images and pair them with their cooresponding animations. Goal is to add a white page and use a tween, or possible an animation fucntion to create a white flash//
 //This will allow me to further add fire and the burning animation as the aftermath of the crash for the title screen.//
 
+// Exploding.displayHeight=1200;
+// Exploding.displayWidth=800;
 backF1.displayWidth = 1200;
 backF1.displayHeight= 800;
 backf2.displayHeight=800;
@@ -204,7 +213,10 @@ titleMusic.play();
 // this.add.sprite(600,400, 'orb1').play('shine')
 
 var title = this.add.image(600,100,'title');
-
+var NewGame= this.add.image(600,400,'newgame');
+var Continue= this.add.image(600,450,'continue');
+var Options= this.add.image(600,500,'options');
+var Credits= this.add.image(600,550,'credits');
 // this.cameras.main.setBounds(0,0, map.widthInPixels, map.heightInPixels);
 var tween = this.tweens.add({
     targets:orbCrash,
